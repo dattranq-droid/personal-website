@@ -103,6 +103,23 @@ function animateCount(el) {
   });
 })();
 
+// --- Travel timeline: reveal on scroll ---
+(function () {
+  const entries = document.querySelectorAll('.tl-entry');
+  if (!entries.length) return;
+
+  const io = new IntersectionObserver((observed) => {
+    observed.forEach(obs => {
+      if (obs.isIntersecting) {
+        obs.target.classList.add('is-visible');
+        io.unobserve(obs.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  entries.forEach(el => io.observe(el));
+})();
+
 // --- Smooth scroll for anchor links ---
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

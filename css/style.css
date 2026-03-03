@@ -871,6 +871,304 @@ a.blog-card:hover::before { opacity: 1; }
 .about-connect-section::before { content: ''; position: absolute; width: 600px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(75,131,246,.1) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
 
 /* ================================================
+   ABOUT PAGE — INTRO SNAPSHOT
+   ================================================ */
+.about-intro { border-top: 1px solid var(--border); }
+.about-intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.chapter-pill {
+  display: inline-block;
+  padding: .35rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text-3);
+  letter-spacing: .04em;
+  transition: border-color .2s, color .2s;
+}
+.chapter-pill:hover { border-color: rgba(75,131,246,.4); color: var(--accent); }
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .85rem;
+}
+.snapshot-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: border-color .2s, background .2s, transform .2s;
+}
+.snapshot-item:hover {
+  border-color: rgba(75,131,246,.3);
+  background: rgba(75,131,246,.05);
+  transform: translateY(-2px);
+}
+.snapshot-val {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: .3rem;
+}
+.snapshot-key {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  line-height: 1.4;
+}
+
+/* ================================================
+   TRAVELS PAGE — HERO
+   ================================================ */
+.travels-hero {
+  background: var(--bg);
+  padding: 96px 0 72px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.travels-hero::before {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(75,131,246,.1) 0%, transparent 70%);
+  top: -250px; right: -180px;
+  pointer-events: none;
+}
+.travels-hero::after {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138,82,245,.07) 0%, transparent 70%);
+  bottom: -120px; left: -120px;
+  pointer-events: none;
+}
+
+/* Travel Stats Bar */
+.travel-stats-strip {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: var(--card);
+  overflow: hidden;
+  max-width: 560px;
+}
+.travel-stat-item {
+  flex: 1;
+  padding: 1.25rem 1rem;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.travel-stat-item:last-child { border-right: none; }
+.travel-stat-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: var(--accent-grd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .3rem;
+}
+.travel-stat-label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* ================================================
+   TRAVELS PAGE — TIMELINE V2 (center-line)
+   ================================================ */
+.tl-v2 {
+  position: relative;
+  padding: 1rem 0 3rem;
+}
+.tl-v2::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(75,131,246,.4) 6%,
+    rgba(75,131,246,.6) 30%,
+    rgba(138,82,245,.6) 70%,
+    rgba(138,82,245,.4) 94%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.tl-v2-year {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+.tl-v2-year:first-child { margin-top: 0; }
+.tl-v2-year-badge {
+  display: inline-block;
+  padding: .5rem 1.75rem;
+  border-radius: 100px;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  color: var(--white);
+  background: var(--bg-2);
+  border: 1.5px solid rgba(75,131,246,.45);
+  box-shadow: 0 0 20px rgba(75,131,246,.15), 0 0 0 4px rgba(75,131,246,.05);
+  position: relative;
+}
+.tl-entry {
+  display: grid;
+  grid-template-columns: 1fr 2.5rem 1fr;
+  gap: 0 2rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 1;
+  align-items: start;
+  /* start invisible for scroll animation */
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.tl-entry.is-visible { opacity: 1; }
+.tl-entry-spacer { /* empty column */ }
+.tl-entry-dot-col {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.35rem;
+}
+.tl-entry-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-grd);
+  flex-shrink: 0;
+  animation: tlDotPulse 3s ease-in-out infinite;
+}
+.tl-entry-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.35rem 1.5rem;
+  cursor: default;
+  transition: border-color .2s, transform .25s, background .2s, box-shadow .25s;
+  /* card starts off-screen for slide animation */
+  opacity: 0;
+}
+.tl-entry.is-visible.right .tl-entry-card {
+  animation: tlSlideFromRight .55s cubic-bezier(.22,.68,0,1.2) .1s both;
+}
+.tl-entry.is-visible.left .tl-entry-card {
+  animation: tlSlideFromLeft .55s cubic-bezier(.22,.68,0,1.2) .1s both;
+}
+.tl-entry-card:hover {
+  border-color: rgba(75,131,246,.4);
+  background: rgba(75,131,246,.05);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 36px rgba(75,131,246,.12);
+}
+.tl-entry-card--first {
+  border-color: rgba(138,82,245,.3);
+  background: rgba(138,82,245,.04);
+}
+.tl-entry-card--first::after {
+  content: '✦ Origin';
+  display: inline-block;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-top: .75rem;
+}
+.tl-entry-flag {
+  font-size: 1.85rem;
+  margin-bottom: .6rem;
+  display: inline-block;
+  line-height: 1;
+  transition: transform .3s ease;
+}
+.tl-entry-card:hover .tl-entry-flag {
+  animation: tlFlagBounce .55s ease-in-out;
+}
+.tl-entry-month {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .2rem;
+}
+.tl-entry-dest {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: .45rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.tl-entry-desc {
+  font-size: .84rem;
+  color: var(--text-2);
+  line-height: 1.68;
+}
+
+/* Google Maps CTA at bottom */
+.travel-maps-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  padding: 1.75rem 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  flex-wrap: wrap;
+}
+
+/* ================================================
+   TRAVEL ANIMATIONS
+   ================================================ */
+@keyframes tlSlideFromRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes tlSlideFromLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes tlFlagBounce {
+  0%   { transform: translateY(0)   scale(1)    rotate(0deg); }
+  25%  { transform: translateY(-9px) scale(1.25) rotate(-6deg); }
+  55%  { transform: translateY(-4px) scale(1.15) rotate(4deg); }
+  80%  { transform: translateY(-7px) scale(1.2)  rotate(-2deg); }
+  100% { transform: translateY(0)   scale(1)    rotate(0deg); }
+}
+@keyframes tlDotPulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(75,131,246,.18), 0 0 12px rgba(75,131,246,.2); }
+  50%     { box-shadow: 0 0 0 7px rgba(75,131,246,.05), 0 0 24px rgba(75,131,246,.45); }
+}
+
+/* ================================================
    FADE IN ANIMATION
    ================================================ */
 /* Handled by JS */
@@ -883,6 +1181,7 @@ a.blog-card:hover::before { opacity: 1; }
   .hero-photo { width: 100%; height: 300px; border-radius: 16px; order: -1; -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); }
   .hero-floatie { font-size: 1.2rem !important; opacity: 0.12; }
   .about-strip-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-intro-inner { grid-template-columns: 1fr; gap: 3rem; }
   .cv-grid { grid-template-columns: 1fr; }
   a.blog-featured-card { grid-template-columns: 1fr; }
   .blog-featured-card-cover { min-height: 180px; }
@@ -895,6 +1194,24 @@ a.blog-card:hover::before { opacity: 1; }
   .about-photo-placeholder { width: 180px; height: 220px; font-size: 4rem; }
   .about-values-grid { grid-template-columns: repeat(2, 1fr); }
   .about-personal-cols { grid-template-columns: 1fr !important; }
+  /* Timeline: collapse to left-edge line */
+  .tl-v2::before { left: 20px; transform: none; }
+  .tl-entry {
+    grid-template-columns: 44px 1fr;
+    gap: 0 1.25rem;
+  }
+  .tl-entry.right .tl-entry-card,
+  .tl-entry.left .tl-entry-card { grid-column: 2; grid-row: 1; }
+  .tl-entry.right .tl-entry-dot-col,
+  .tl-entry.left .tl-entry-dot-col { grid-column: 1; grid-row: 1; }
+  .tl-entry.right .tl-entry-spacer,
+  .tl-entry.left .tl-entry-spacer { display: none; }
+  .tl-entry.is-visible.right .tl-entry-card,
+  .tl-entry.is-visible.left .tl-entry-card {
+    animation: tlSlideFromRight .55s cubic-bezier(.22,.68,0,1.2) .1s both;
+  }
+  .tl-v2-year { justify-content: flex-start; padding-left: calc(44px + 1.25rem); }
+  .travel-stats-strip { max-width: 100%; }
 }
 
 @media (max-width: 640px) {
@@ -917,4 +1234,7 @@ a.blog-card:hover::before { opacity: 1; }
   .blog-card-grid { grid-template-columns: 1fr; }
   .about-values-grid { grid-template-columns: 1fr; }
   .skills-related { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  /* Snapshot grid: 2 columns on mobile */
+  .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .travel-maps-cta { flex-direction: column; align-items: flex-start; }
 }
