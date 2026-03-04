@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travels — Dat Tran</title>
-  <meta name="description" content="12 countries. 23+ trips. Always moving — a chronological travel log with a slight Switzerland obsession." />
+  <meta name="description" content="12 countries. 25 trips. Always moving — a chronological travel log with a slight Switzerland obsession." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -28,9 +28,7 @@
     </div>
   </nav>
 
-  <!-- ================================================
-       TRAVELS HERO
-       ================================================ -->
+  <!-- HERO -->
   <header class="travels-hero">
     <div class="hero-floaties" aria-hidden="true">
       <span class="hero-floatie">🇮🇹</span>
@@ -60,18 +58,16 @@
       <p class="lead" style="max-width:580px; margin-bottom:2.5rem;">
         Travel is the thing outside work I spend the most time thinking about. New cities,
         new food, new ways people organise their lives — I find all of it genuinely fascinating.
-        Which might explain the number of trips to Switzerland. Below is the full list,
-        from where it started (Milano, June 2023) to wherever I went most recently.
+        Which might explain the number of trips to Switzerland. From Wroclaw in March 2023
+        to wherever I go next — the full story is below.
       </p>
-
-      <!-- Stats Bar -->
       <div class="travel-stats-strip">
         <div class="travel-stat-item">
           <div class="travel-stat-num"><span data-count="12">12</span></div>
           <div class="travel-stat-label">Countries</div>
         </div>
         <div class="travel-stat-item">
-          <div class="travel-stat-num"><span data-count="23" data-suffix="+">23+</span></div>
+          <div class="travel-stat-num"><span data-count="25">25</span></div>
           <div class="travel-stat-label">Trips</div>
         </div>
         <div class="travel-stat-item">
@@ -86,313 +82,411 @@
     </div>
   </header>
 
-  <!-- ================================================
-       TIMELINE
-       ================================================ -->
-  <main class="section">
-    <div class="wrap">
+  <!-- HORIZONTAL TIMELINE -->
+  <section class="section tl-section">
+    <div class="tl-scroll-hint" aria-hidden="true">
+      <span class="tl-scroll-arrow tl-scroll-arrow--left">‹</span>
+      <span class="tl-scroll-label">Drag or swipe to travel through time</span>
+      <span class="tl-scroll-arrow tl-scroll-arrow--right">›</span>
+    </div>
 
-      <div class="tl-v2">
+    <div class="tl-horiz-outer" id="tlOuter">
+      <div class="tl-horiz" id="tlTrack">
 
-        <!-- ===== 2026 ===== -->
-        <div class="tl-v2-year">
-          <span class="tl-v2-year-badge">2026</span>
-        </div>
+        <!-- ── 2023 ─────────────────────────────────────────── -->
 
-        <!-- Rome Dec 2026 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇮🇹</div>
-            <div class="tl-entry-month">Dec 2026</div>
-            <div class="tl-entry-dest">Rome</div>
-            <div class="tl-entry-desc">The eternal city. Pasta, ruins, and the kind of chaos that somehow works perfectly. Also the best carbonara I've ever had — and I've had a lot.</div>
+        <!-- 1 · Wroclaw · Mar 2023 · FIRST TRIP -->
+        <div class="tl-he">
+          <div class="tl-he-head">
+            <div class="tl-he-year-pill">2023</div>
+          </div>
+          <div class="tl-he-dot tl-he-dot--first"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card tl-he-card--first">
+            <div class="tl-entry-flag">🇵🇱 <span class="tl-entry-country">Poland</span></div>
+            <div class="tl-entry-month">Mar 2023 · Trip #1</div>
+            <div class="tl-entry-dest">Wroclaw</div>
+            <div class="tl-photo">
+              <img src="assets/images/travels/wroclaw-mar-2023.jpg" alt="Two friends in Wroclaw, Poland" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="tl-photo-ph" style="display:none;">📷 <span>Add photo</span></div>
+            </div>
+            <div class="tl-entry-desc">The one that started everything. Wroclaw in March — cold pavements, a colourful market square, and hundreds of hidden dwarf statues dotted around the city. I didn't know this weekend trip would turn into four years of barely sitting still. The best kind of accident.</div>
           </div>
         </div>
 
-        <!-- London Nov 2026 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇬🇧</div>
-            <div class="tl-entry-month">Nov 2026</div>
-            <div class="tl-entry-dest">London</div>
-            <div class="tl-entry-desc">Grey skies, great food, and an inexplicable urge to apologise constantly. Also the Tate Modern at 9pm with no queue, which should be illegal.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Road trip Aug 2026 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭🇮🇹</div>
-            <div class="tl-entry-month">Aug 2026</div>
-            <div class="tl-entry-dest">Road trip — Zurich → Dolomites → Garda → Bologna → Torino → Milano</div>
-            <div class="tl-entry-desc">One of those trips where you plan loosely and it somehow ends up being exactly right. Mountains, lakes, and more pasta than is medically advisable. Ten out of ten, would carb-load again.</div>
-          </div>
-        </div>
-
-        <!-- ===== 2025 ===== -->
-        <div class="tl-v2-year">
-          <span class="tl-v2-year-badge">2025</span>
-        </div>
-
-        <!-- Zurich + Klosters Jul 2025 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Jul 2025</div>
-            <div class="tl-entry-dest">Zurich &amp; Klosters</div>
-            <div class="tl-entry-desc">Switzerland again, because apparently it's just going to be a theme in my life. Klosters is the kind of village that makes you question your Copenhagen apartment decisions.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Málaga & Marbella Mar 2025 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇪🇸</div>
-            <div class="tl-entry-month">Mar 2025</div>
-            <div class="tl-entry-dest">Málaga &amp; Marbella</div>
-            <div class="tl-entry-desc">Sun in March. That's really all you need to say. The Costa del Sol does what Danish winters simply cannot. I came back five shades less pale and significantly happier.</div>
-          </div>
-        </div>
-
-        <!-- Lisboa Mar 2025 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇵🇹</div>
-            <div class="tl-entry-month">Mar 2025</div>
-            <div class="tl-entry-dest">Lisboa</div>
-            <div class="tl-entry-desc">Back again. Lisbon has a way of pulling you back — the light, the pastéis de nata, the trams that are definitely not designed for modern body proportions.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Zurich Mar 2025 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Mar 2025</div>
-            <div class="tl-entry-dest">Zurich</div>
-            <div class="tl-entry-desc">Third Zurich of the year. At this point I'm basically an honorary citizen. The Swiss have figured something out — I'm still not entirely sure what it is, but I respect it.</div>
-          </div>
-        </div>
-
-        <!-- Zurich Feb 2025 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Feb 2025</div>
-            <div class="tl-entry-dest">Zurich</div>
-            <div class="tl-entry-desc">Cold outside, warm inside. Switzerland in winter has its own kind of charm — the kind that involves a lot of cheese, mulled wine, and morally questionable amounts of raclette.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Berlin Jan 2025 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇩🇪</div>
-            <div class="tl-entry-month">Jan 2025</div>
-            <div class="tl-entry-dest">Berlin</div>
-            <div class="tl-entry-desc">Berlin in January — brutally cold, utterly cool. The city where no one cares what you do, in the best possible way. Also the best döner I've had outside of Turkey. Possibly in the world.</div>
-          </div>
-        </div>
-
-        <!-- ===== 2024 ===== -->
-        <div class="tl-v2-year">
-          <span class="tl-v2-year-badge">2024</span>
-        </div>
-
-        <!-- Lisboa Oct 2024 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇵🇹</div>
-            <div class="tl-entry-month">Oct 2024</div>
-            <div class="tl-entry-dest">Lisboa</div>
-            <div class="tl-entry-desc">Autumn in Lisbon is genuinely perfect. The crowds thin out, the light gets golden, and the wine stays cheap. The hills stay steep, unfortunately. My calves have opinions about Lisboa.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Zurich + Lauterbrunnen Aug 2024 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Aug 2024</div>
-            <div class="tl-entry-dest">Zurich &amp; Lauterbrunnen</div>
-            <div class="tl-entry-desc">Lauterbrunnen is what screensavers are based on. Waterfalls everywhere, mountains blocking the horizon, air that smells like nothing has ever been wrong in the world. Surreal.</div>
-          </div>
-        </div>
-
-        <!-- Tokyo Jul 2024 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇯🇵</div>
-            <div class="tl-entry-month">Jul 2024</div>
-            <div class="tl-entry-dest">Tokyo</div>
-            <div class="tl-entry-desc">Nothing prepares you for Tokyo. The scale, the organisation, the food, the vending machines, the food again. I came back with a deep respect for Japanese culture and a mild existential crisis about Danish infrastructure.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Vietnam Jun 2024 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇻🇳</div>
-            <div class="tl-entry-month">Jun 2024</div>
-            <div class="tl-entry-dest">Ho Chi Minh City, Hội An &amp; Huế</div>
-            <div class="tl-entry-desc">Back to Vietnam — this time longer, slower. Hội An is everything they say it is. Huế surprised me completely. This trip felt personal in ways I'm still processing. Recommended to literally everyone.</div>
-          </div>
-        </div>
-
-        <!-- Milano May 2024 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇮🇹</div>
-            <div class="tl-entry-month">May 2024</div>
+        <!-- 2 · Milano · Jun 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇮🇹 <span class="tl-entry-country">Italy</span></div>
+            <div class="tl-entry-month">Jun 2023 · Trip #2</div>
             <div class="tl-entry-dest">Milano</div>
-            <div class="tl-entry-desc">Second time in Milano — the city grows on you. Fashion week stress very much not included. Just good coffee, better aperitivo, and architecture that makes Copenhagen feel like it's still figuring things out.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Warsaw Apr 2024 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇵🇱</div>
-            <div class="tl-entry-month">Apr 2024</div>
-            <div class="tl-entry-dest">Warszawa</div>
-            <div class="tl-entry-desc">Warsaw is more beautiful and more complex than I expected. A city that's rebuilt itself — literally and figuratively — and carries its history without being crushed by it. Criminally underrated.</div>
+            <div class="tl-photo">
+              <img src="assets/images/travels/milano-jun-2023.jpg" alt="Inter Milan shirt and wine, Milano" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="tl-photo-ph" style="display:none;">📷 <span>Add photo</span></div>
+            </div>
+            <div class="tl-entry-desc">Milano taught me that Italians take aesthetics seriously in a way that kind of changes how you see everything else. The aperitivo culture. The Inter shirt. The beginning of a very expensive habit.</div>
           </div>
         </div>
 
-        <!-- Paris Mar 2024 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇫🇷</div>
-            <div class="tl-entry-month">Mar 2024</div>
-            <div class="tl-entry-dest">Paris</div>
-            <div class="tl-entry-desc">Yes, Paris. Always Paris. I know it's a cliché, but standing in front of the right painting at the right time does something to you. Also: the bread. The bread is not a cliché. The bread is simply correct.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Budapest Feb 2024 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇭🇺</div>
-            <div class="tl-entry-month">Feb 2024</div>
-            <div class="tl-entry-dest">Budapest</div>
-            <div class="tl-entry-desc">Budapest in winter is moody and magnificent. Thermal baths, ruin bars, and the kind of coffee culture that makes you want to sit and think for three hours. I understand why people move here.</div>
+        <!-- 3 · Lisboa, Porto & Lagos · Aug 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇵🇹 <span class="tl-entry-country">Portugal</span></div>
+            <div class="tl-entry-month">Aug 2023 · Trip #3</div>
+            <div class="tl-entry-dest">Lisboa, Porto &amp; Lagos</div>
+            <div class="tl-photo">
+              <img src="assets/images/travels/lisbon-aug-2023.jpg" alt="Playing chess with Cecilie, Lisboa" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="tl-photo-ph" style="display:none;">📷 <span>Add photo</span></div>
+            </div>
+            <div class="tl-entry-desc">Portugal in three cities — Lisbon's hills, Porto's wine cellars, Lagos's cliffs into the Atlantic. One of those trips you measure everything else against. Portugal just does it right.</div>
           </div>
         </div>
 
-        <!-- ===== 2023 ===== -->
-        <div class="tl-v2-year">
-          <span class="tl-v2-year-badge">2023</span>
-        </div>
-
-        <!-- Zurich Nov 2023 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Nov 2023</div>
-            <div class="tl-entry-dest">Zurich</div>
-            <div class="tl-entry-desc">First of many Zurich trips. The Swiss have figured something out and I'm not entirely sure what it is — but I keep going back to try to understand. Clean streets. Excellent public transport. Exceptional cheese.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Seoul Nov 2023 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇰🇷</div>
-            <div class="tl-entry-month">Nov 2023</div>
-            <div class="tl-entry-dest">Seoul</div>
-            <div class="tl-entry-desc">Seoul moved faster than any city I've ever been to — in every sense. The food, the energy, the nightlife, the skincare stores every five meters. A city that genuinely doesn't waste a single moment.</div>
-          </div>
-        </div>
-
-        <!-- Ho Chi Minh City Oct 2023 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇻🇳</div>
-            <div class="tl-entry-month">Oct 2023</div>
-            <div class="tl-entry-dest">Ho Chi Minh City</div>
-            <div class="tl-entry-desc">First time back since I was a kid. Walking through the streets knowing my parents once walked these same streets — with very different plans for their future — hit differently. Still thinking about it.</div>
-          </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
-        </div>
-
-        <!-- Zurich + Engelberg Aug 2023 → RIGHT -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇨🇭</div>
-            <div class="tl-entry-month">Aug 2023</div>
+        <!-- 4 · Zurich & Engelberg · Aug 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Aug 2023 · Trip #4</div>
             <div class="tl-entry-dest">Zurich &amp; Engelberg</div>
+            <div class="tl-photo">
+              <img src="assets/images/travels/zurich-engelberg-aug-2023.jpg" alt="Group photo at Engelberg, Switzerland" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="tl-photo-ph" style="display:none;">📷 <span>Add photo</span></div>
+            </div>
             <div class="tl-entry-desc">Engelberg sits at the foot of Mount Titlis. You take a cable car up and suddenly you're standing in a completely different world — 3,000 metres of perspective. Highly, highly recommend.</div>
           </div>
         </div>
 
-        <!-- Portugal Aug 2023 → LEFT -->
-        <div class="tl-entry left">
-          <div class="tl-entry-card">
-            <div class="tl-entry-flag">🇵🇹</div>
-            <div class="tl-entry-month">Aug 2023</div>
-            <div class="tl-entry-dest">Lisboa, Porto &amp; Lagos</div>
-            <div class="tl-entry-desc">Portugal in three cities — Lisbon's hills, Porto's wine cellars, and Lagos's cliffs straight into the Atlantic. One of those trips you measure everything else against. Portugal just does it right.</div>
+        <!-- 5 · Ho Chi Minh City · Oct 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇻🇳 <span class="tl-entry-country">Vietnam</span></div>
+            <div class="tl-entry-month">Oct 2023 · Trip #5</div>
+            <div class="tl-entry-dest">Ho Chi Minh City</div>
+            <div class="tl-photo">
+              <img src="assets/images/travels/hcmc-oct-2023.jpg" alt="Grandmother in Ho Chi Minh City, Vietnam" loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="tl-photo-ph" style="display:none;">📷 <span>Add photo</span></div>
+            </div>
+            <div class="tl-entry-desc">First time back since I was a kid. Walking through the streets knowing my parents once walked these same streets — with very different plans for their future — hit differently. Still thinking about it.</div>
           </div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-spacer"></div>
         </div>
 
-        <!-- Milano Jun 2023 → RIGHT — FIRST TRIP -->
-        <div class="tl-entry right">
-          <div class="tl-entry-spacer"></div>
-          <div class="tl-entry-dot-col"><div class="tl-entry-dot"></div></div>
-          <div class="tl-entry-card tl-entry-card--first">
-            <div class="tl-entry-flag">🇮🇹</div>
-            <div class="tl-entry-month">Jun 2023 · Where it started</div>
+        <!-- 6 · Seoul · Nov 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇰🇷 <span class="tl-entry-country">South Korea</span></div>
+            <div class="tl-entry-month">Nov 2023 · Trip #6</div>
+            <div class="tl-entry-dest">Seoul</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Seoul moved faster than any city I've ever been to — in every sense. The food, the energy, the nightlife, the skincare stores every five meters. A city that genuinely doesn't waste a single moment.</div>
+          </div>
+        </div>
+
+        <!-- 7 · Zurich · Nov 2023 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Nov 2023 · Trip #7</div>
+            <div class="tl-entry-dest">Zurich</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">First of many Zurich trips. The Swiss have figured something out and I'm not entirely sure what it is — but I keep going back to try to understand. Clean streets. Excellent transport. Exceptional cheese.</div>
+          </div>
+        </div>
+
+        <!-- ── 2024 ─────────────────────────────────────────── -->
+
+        <!-- 8 · Budapest · Feb 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head">
+            <div class="tl-he-year-pill">2024</div>
+          </div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇭🇺 <span class="tl-entry-country">Hungary</span></div>
+            <div class="tl-entry-month">Feb 2024 · Trip #8</div>
+            <div class="tl-entry-dest">Budapest</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Budapest in winter is moody and magnificent. Thermal baths, ruin bars, and the kind of coffee culture that makes you want to sit and think for three hours. I understand why people move here.</div>
+          </div>
+        </div>
+
+        <!-- 9 · Paris · Mar 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇫🇷 <span class="tl-entry-country">France</span></div>
+            <div class="tl-entry-month">Mar 2024 · Trip #9</div>
+            <div class="tl-entry-dest">Paris</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Yes, Paris. Always Paris. I know it's a cliché, but standing in front of the right painting at the right time does something to you. Also: the bread. The bread is not a cliché. The bread is simply correct.</div>
+          </div>
+        </div>
+
+        <!-- 10 · Warszawa · Apr 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇵🇱 <span class="tl-entry-country">Poland</span></div>
+            <div class="tl-entry-month">Apr 2024 · Trip #10</div>
+            <div class="tl-entry-dest">Warszawa</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Warsaw is more beautiful and more complex than I expected. A city that's rebuilt itself — literally and figuratively — and carries its history without being crushed by it. Criminally underrated.</div>
+          </div>
+        </div>
+
+        <!-- 11 · Milano · May 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇮🇹 <span class="tl-entry-country">Italy</span></div>
+            <div class="tl-entry-month">May 2024 · Trip #11</div>
             <div class="tl-entry-dest">Milano</div>
-            <div class="tl-entry-desc">Where the journey starts. Milano taught me that Italians take aesthetics seriously in a way that kind of changes how you see everything else. The beginning of a very expensive habit.</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Second time in Milano — the city grows on you. Fashion week stress not included. Just good coffee, better aperitivo, and architecture that makes Copenhagen feel like it's still figuring things out.</div>
           </div>
         </div>
 
-      </div><!-- end .tl-v2 -->
+        <!-- 12 · Vietnam · Jun 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇻🇳 <span class="tl-entry-country">Vietnam</span></div>
+            <div class="tl-entry-month">Jun 2024 · Trip #12</div>
+            <div class="tl-entry-dest">Ho Chi Minh City, Hội An &amp; Huế</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Back to Vietnam — this time longer, slower. Hội An is everything they say it is. Huế surprised me completely. This trip felt personal in ways I'm still processing. Recommended to literally everyone.</div>
+          </div>
+        </div>
 
-      <!-- Google Maps CTA -->
+        <!-- 13 · Tokyo · Jul 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇯🇵 <span class="tl-entry-country">Japan</span></div>
+            <div class="tl-entry-month">Jul 2024 · Trip #13</div>
+            <div class="tl-entry-dest">Tokyo</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Nothing prepares you for Tokyo. The scale, the organisation, the food, the vending machines, the food again. I came back with a deep respect for Japanese culture and a mild existential crisis about Danish infrastructure.</div>
+          </div>
+        </div>
+
+        <!-- 14 · Zurich & Lauterbrunnen · Aug 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Aug 2024 · Trip #14</div>
+            <div class="tl-entry-dest">Zurich &amp; Lauterbrunnen</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Lauterbrunnen is what screensavers are based on. Waterfalls everywhere, mountains blocking the horizon, air that smells like nothing has ever been wrong in the world. Surreal.</div>
+          </div>
+        </div>
+
+        <!-- 15 · Lisboa · Oct 2024 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇵🇹 <span class="tl-entry-country">Portugal</span></div>
+            <div class="tl-entry-month">Oct 2024 · Trip #15</div>
+            <div class="tl-entry-dest">Lisboa</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Autumn in Lisbon is genuinely perfect. The crowds thin out, the light gets golden, and the wine stays cheap. The hills stay steep, unfortunately. My calves have opinions about Lisboa.</div>
+          </div>
+        </div>
+
+        <!-- ── 2025 ─────────────────────────────────────────── -->
+
+        <!-- 16 · Berlin · Jan 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head">
+            <div class="tl-he-year-pill">2025</div>
+          </div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇩🇪 <span class="tl-entry-country">Germany</span></div>
+            <div class="tl-entry-month">Jan 2025 · Trip #16</div>
+            <div class="tl-entry-dest">Berlin</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Berlin in January — brutally cold, utterly cool. The city where no one cares what you do, in the best possible way. Also the best döner I've had outside of Turkey. Possibly in the world.</div>
+          </div>
+        </div>
+
+        <!-- 17 · Zurich · Feb 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Feb 2025 · Trip #17</div>
+            <div class="tl-entry-dest">Zurich</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Cold outside, warm inside. Switzerland in winter has its own kind of charm — the kind that involves a lot of cheese, mulled wine, and morally questionable amounts of raclette.</div>
+          </div>
+        </div>
+
+        <!-- 18 · Zurich · Mar 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Mar 2025 · Trip #18</div>
+            <div class="tl-entry-dest">Zurich</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Third Zurich of the year. At this point I'm basically an honorary citizen. The Swiss have figured something out — I'm still not entirely sure what it is, but I respect it deeply.</div>
+          </div>
+        </div>
+
+        <!-- 19 · Lisboa · Mar 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇵🇹 <span class="tl-entry-country">Portugal</span></div>
+            <div class="tl-entry-month">Mar 2025 · Trip #19</div>
+            <div class="tl-entry-dest">Lisboa</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Back again. Lisbon has a way of pulling you back — the light, the pastéis de nata, the trams that are definitely not designed for modern body proportions.</div>
+          </div>
+        </div>
+
+        <!-- 20 · Málaga & Marbella · Mar 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇪🇸 <span class="tl-entry-country">Spain</span></div>
+            <div class="tl-entry-month">Mar 2025 · Trip #20</div>
+            <div class="tl-entry-dest">Málaga &amp; Marbella</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Sun in March. That's really all you need to say. The Costa del Sol does what Danish winters simply cannot. I came back five shades less pale and significantly happier.</div>
+          </div>
+        </div>
+
+        <!-- 21 · Zurich & Klosters · Jul 2025 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭 <span class="tl-entry-country">Switzerland</span></div>
+            <div class="tl-entry-month">Jul 2025 · Trip #21</div>
+            <div class="tl-entry-dest">Zurich &amp; Klosters</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Switzerland again, because apparently it's just going to be a theme in my life. Klosters is the kind of village that makes you question your Copenhagen apartment decisions.</div>
+          </div>
+        </div>
+
+        <!-- ── 2026 ─────────────────────────────────────────── -->
+
+        <!-- 22 · Road trip · Aug 2026 -->
+        <div class="tl-he">
+          <div class="tl-he-head">
+            <div class="tl-he-year-pill">2026</div>
+          </div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇨🇭🇮🇹 <span class="tl-entry-country">Switzerland · Italy</span></div>
+            <div class="tl-entry-month">Aug 2026 · Trip #22</div>
+            <div class="tl-entry-dest">Road Trip — Zurich → Dolomites → Garda → Bologna → Torino → Milano</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">One of those trips where you plan loosely and it somehow ends up being exactly right. Mountains, lakes, and more pasta than is medically advisable. Ten out of ten, would carb-load again.</div>
+          </div>
+        </div>
+
+        <!-- 23 · Mallorca · Aug 2026 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇪🇸 <span class="tl-entry-country">Spain</span></div>
+            <div class="tl-entry-month">Aug 2026 · Trip #23</div>
+            <div class="tl-entry-dest">Mallorca</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Sun, sea, and the mildly humbling realisation that I've become exactly the person who goes to Mallorca in August. The coves are extraordinary, the seafood is perfect, and sometimes you just need to turn your brain off. Zero regrets.</div>
+          </div>
+        </div>
+
+        <!-- 24 · London · Nov 2026 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇬🇧 <span class="tl-entry-country">United Kingdom</span></div>
+            <div class="tl-entry-month">Nov 2026 · Trip #24</div>
+            <div class="tl-entry-dest">London</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">Grey skies, great food, and an inexplicable urge to apologise constantly. Also the Tate Modern at 9pm with no queue, which should be illegal.</div>
+          </div>
+        </div>
+
+        <!-- 25 · Rome · Dec 2026 -->
+        <div class="tl-he">
+          <div class="tl-he-head"></div>
+          <div class="tl-he-dot"></div>
+          <div class="tl-he-conn"></div>
+          <div class="tl-he-card">
+            <div class="tl-entry-flag">🇮🇹 <span class="tl-entry-country">Italy</span></div>
+            <div class="tl-entry-month">Dec 2026 · Trip #25</div>
+            <div class="tl-entry-dest">Rome</div>
+            <div class="tl-photo tl-photo-ph">📷 <span>Photo coming soon</span></div>
+            <div class="tl-entry-desc">The eternal city. Pasta, ruins, and the kind of chaos that somehow works perfectly. Also the best carbonara I've ever had — and I've had a lot.</div>
+          </div>
+        </div>
+
+        <!-- Spacer at the end -->
+        <div class="tl-he-end-spacer"></div>
+
+      </div><!-- end .tl-horiz -->
+    </div><!-- end .tl-horiz-outer -->
+
+    <!-- Google Maps CTA -->
+    <div class="wrap">
       <div class="travel-maps-cta">
         <span style="font-size:2rem;">🗺️</span>
         <div>
@@ -405,9 +499,9 @@
           Open Google Maps →
         </a>
       </div>
-
     </div>
-  </main>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -427,6 +521,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-
 </body>
 </html>

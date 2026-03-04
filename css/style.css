@@ -1199,6 +1199,260 @@ a.blog-card:hover::before { opacity: 1; }
   line-height: 1.68;
 }
 
+/* ================================================
+   HORIZONTAL TIMELINE (Travels page)
+   ================================================ */
+
+/* Section wrapper */
+.tl-section { padding-top: 2rem; padding-bottom: 0; }
+
+/* Scroll hint bar */
+.tl-scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  margin-bottom: 2rem;
+  color: var(--text-3);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  user-select: none;
+}
+.tl-scroll-arrow {
+  font-size: 1.4rem;
+  line-height: 1;
+  animation: tl-nudge 1.6s ease-in-out infinite;
+}
+.tl-scroll-arrow--left  { animation-delay: 0s; }
+.tl-scroll-arrow--right { animation-delay: .3s; }
+@keyframes tl-nudge {
+  0%, 100% { transform: translateX(0);    opacity: .4; }
+  50%       { transform: translateX(4px); opacity: 1; }
+}
+.tl-scroll-arrow--left { animation-name: tl-nudge-left; }
+@keyframes tl-nudge-left {
+  0%, 100% { transform: translateX(0);     opacity: .4; }
+  50%       { transform: translateX(-4px); opacity: 1; }
+}
+
+/* Outer scroll wrapper */
+.tl-horiz-outer {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0 0 3rem;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,.15) transparent;
+}
+.tl-horiz-outer::-webkit-scrollbar { height: 4px; }
+.tl-horiz-outer::-webkit-scrollbar-track { background: transparent; }
+.tl-horiz-outer::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 4px; }
+.tl-horiz-outer.is-dragging { cursor: grabbing; }
+
+/* Inner flex track */
+.tl-horiz {
+  display: flex;
+  align-items: flex-start;
+  min-width: max-content;
+  padding: 0 3rem;
+  position: relative;
+}
+
+/* The horizontal line — sits at: head-height (2.5rem) + half-dot (7px) */
+.tl-horiz::before {
+  content: '';
+  position: absolute;
+  top: calc(2.5rem + 7px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0,
+    var(--border) 3rem,
+    var(--border) calc(100% - 3rem),
+    transparent 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Each trip entry */
+.tl-he {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 252px;
+  flex-shrink: 0;
+  padding: 0 8px;
+  scroll-snap-align: start;
+}
+
+/* Year badge row (2.5rem tall, matches line position) */
+.tl-he-head {
+  height: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: .45rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.tl-he-year-pill {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  padding: .2rem .8rem;
+  border-radius: 20px;
+  font-size: .65rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+  position: relative;
+  z-index: 3;
+}
+
+/* Dot on the line */
+.tl-he-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1.5px var(--accent);
+  flex-shrink: 0;
+  z-index: 2;
+  transition: transform .2s, box-shadow .25s;
+  position: relative;
+}
+.tl-he:hover .tl-he-dot {
+  transform: scale(1.4);
+  box-shadow: 0 0 0 4px rgba(75, 131, 246, .25);
+}
+/* First-trip dot: purple glow */
+.tl-he-dot--first {
+  background: #8A52F5;
+  box-shadow: 0 0 0 1.5px #8A52F5;
+  animation: tl-dot-pulse 2.5s ease-in-out infinite;
+}
+@keyframes tl-dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 1.5px #8A52F5, 0 0 10px rgba(138,82,245,.3); }
+  50%       { box-shadow: 0 0 0 5px rgba(138,82,245,.1), 0 0 20px rgba(138,82,245,.5); }
+}
+
+/* Vertical connector dot → card */
+.tl-he-conn {
+  width: 2px;
+  height: 1.75rem;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* The card */
+.tl-he-card {
+  width: 100%;
+  background: var(--card);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 1.25rem 1.1rem;
+  transition: border-color .2s, transform .25s, box-shadow .25s;
+  position: relative;
+}
+.tl-he-card:hover {
+  border-color: rgba(75, 131, 246, .4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(0,0,0,.35);
+}
+/* First-trip card: purple accent */
+.tl-he-card--first {
+  border-color: rgba(138, 82, 245, .3);
+}
+.tl-he-card--first::before {
+  content: '✦ First Trip';
+  position: absolute;
+  top: -1px;
+  right: 1rem;
+  background: #8A52F5;
+  color: #fff;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  padding: .2rem .6rem;
+  border-radius: 0 0 8px 8px;
+  text-transform: uppercase;
+}
+
+/* Flag + country line */
+.tl-entry-flag {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-bottom: .4rem;
+  line-height: 1;
+}
+.tl-entry-country {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--text-2);
+  letter-spacing: .04em;
+  line-height: 1;
+}
+.tl-he-card:hover .tl-entry-flag {
+  animation: tlFlagBounce .55s ease-in-out;
+}
+
+/* Photo slot */
+.tl-photo {
+  width: 100%;
+  height: 145px;
+  border-radius: 9px;
+  overflow: hidden;
+  margin: .75rem 0 .65rem;
+  background: rgba(255,255,255,.03);
+  display: flex;
+}
+.tl-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+/* Placeholder (no-photo state) */
+.tl-photo.tl-photo-ph,
+.tl-photo-ph {
+  border: 1.5px dashed rgba(255,255,255,.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  color: rgba(255,255,255,.2);
+  font-size: 1.3rem;
+  cursor: default;
+  transition: border-color .2s;
+  display: flex;
+}
+.tl-photo.tl-photo-ph span,
+.tl-photo-ph span {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.18);
+}
+.tl-he-card:hover .tl-photo.tl-photo-ph,
+.tl-he-card:hover .tl-photo-ph {
+  border-color: rgba(255,255,255,.2);
+}
+
+/* End spacer for last card breathing room */
+.tl-he-end-spacer { width: 3rem; flex-shrink: 0; }
+
 /* Google Maps CTA at bottom */
 .travel-maps-cta {
   display: flex;

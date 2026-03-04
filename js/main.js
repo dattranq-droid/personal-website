@@ -120,6 +120,38 @@ function animateCount(el) {
   entries.forEach(el => io.observe(el));
 })();
 
+// --- Horizontal timeline: drag to scroll ---
+(function () {
+  const outer = document.getElementById('tlOuter');
+  if (!outer) return;
+
+  let isDown = false, startX = 0, scrollLeft = 0;
+
+  outer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    outer.classList.add('is-dragging');
+    startX = e.pageX - outer.offsetLeft;
+    scrollLeft = outer.scrollLeft;
+  });
+  outer.addEventListener('mouseleave', () => { isDown = false; outer.classList.remove('is-dragging'); });
+  outer.addEventListener('mouseup',    () => { isDown = false; outer.classList.remove('is-dragging'); });
+  outer.addEventListener('mousemove',  (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - outer.offsetLeft;
+    outer.scrollLeft = scrollLeft - (x - startX) * 1.4;
+  });
+
+  // Hide scroll hint after first scroll
+  const hint = outer.closest('.tl-section')?.querySelector('.tl-scroll-hint');
+  if (hint) {
+    outer.addEventListener('scroll', () => {
+      hint.style.opacity = '0';
+      hint.style.pointerEvents = 'none';
+    }, { once: true });
+  }
+})();
+
 // --- Smooth scroll for anchor links ---
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
