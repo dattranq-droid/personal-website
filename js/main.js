@@ -120,7 +120,7 @@ function animateCount(el) {
   entries.forEach(el => io.observe(el));
 })();
 
-// --- Horizontal timeline: drag to scroll ---
+// --- Horizontal timeline: drag to scroll + carousel focus ---
 (function () {
   const outer = document.getElementById('tlOuter');
   if (!outer) return;
@@ -150,6 +150,28 @@ function animateCount(el) {
       hint.style.pointerEvents = 'none';
     }, { once: true });
   }
+
+  // Carousel focus: fade + shrink cards away from center
+  const entries = Array.from(outer.querySelectorAll('.tl-he'));
+  function updateFocus() {
+    const cx = outer.scrollLeft + outer.clientWidth / 2;
+    const fadeWidth = outer.clientWidth * 0.55; // distance at which card is fully faded
+    entries.forEach(entry => {
+      const card = entry.querySelector('.tl-he-card');
+      const ec = entry.offsetLeft + entry.offsetWidth / 2;
+      const dist = Math.abs(cx - ec);
+      const t = Math.min(dist / fadeWidth, 1); // 0 = center, 1 = fully faded
+      const opacity = 1 - t * 0.65;
+      const scale = 1 - t * 0.13;
+      entry.style.opacity = opacity;
+      if (card) card.style.transform = `scale(${scale})`;
+    });
+  }
+
+  outer.addEventListener('scroll', updateFocus, { passive: true });
+  window.addEventListener('resize', updateFocus);
+  // Run once after layout settles
+  requestAnimationFrame(updateFocus);
 })();
 
 // --- Smooth scroll for anchor links ---
