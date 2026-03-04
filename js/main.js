@@ -174,6 +174,50 @@ function animateCount(el) {
   requestAnimationFrame(updateFocus);
 })();
 
+// --- Reading progress bar ---
+(function () {
+  const article = document.querySelector('.post-content');
+  if (!article) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'reading-progress';
+  document.body.prepend(bar);
+
+  function update() {
+    const rect = article.getBoundingClientRect();
+    const total = article.offsetHeight - window.innerHeight;
+    const scrolled = Math.max(0, -rect.top);
+    bar.style.width = Math.min(100, (scrolled / total) * 100) + '%';
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// --- Post share buttons ---
+(function () {
+  const liBtn = document.getElementById('linkedin-share');
+  if (liBtn) {
+    liBtn.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href);
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        copyBtn.classList.add('copied');
+        copyBtn.querySelector('svg').style.display = 'none';
+        copyBtn.childNodes[copyBtn.childNodes.length - 1].textContent = ' Copied!';
+        setTimeout(() => {
+          copyBtn.classList.remove('copied');
+          copyBtn.querySelector('svg').style.display = '';
+          copyBtn.childNodes[copyBtn.childNodes.length - 1].textContent = ' Copy link';
+        }, 2000);
+      });
+    });
+  }
+})();
+
 // --- Smooth scroll for anchor links ---
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

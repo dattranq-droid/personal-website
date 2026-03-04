@@ -50,20 +50,106 @@
       </p>
 
       <div class="post-byline-light">
-        <div class="post-byline-avatar-light">DT</div>
-        <div>
-          <div class="post-byline-name-light">Dat Tran</div>
-          <div class="post-byline-meta-light">Senior Manager, Norlys · March 4, 2026</div>
-        </div>
-        <div style="margin-left:auto; display:flex; gap:.5rem; flex-wrap:wrap;">
-          <a href="../about.html" class="btn btn-ghost btn-sm">About me →</a>
-        </div>
+        <div class="post-byline-meta-light" style="color:var(--text-3);">March 4, 2026</div>
       </div>
     </div>
   </header>
 
-  <!-- Cover banner -->
-  <div class="post-cover-banner cover-purple"></div>
+  <!-- Hero illustration -->
+  <div class="post-hero-illustration">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0d0a1a"/>
+          <stop offset="50%" style="stop-color:#1a0e2e"/>
+          <stop offset="100%" style="stop-color:#0e1626"/>
+        </linearGradient>
+        <radialGradient id="glow1" cx="30%" cy="60%" r="40%">
+          <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:.45"/>
+          <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+        </radialGradient>
+        <radialGradient id="glow2" cx="70%" cy="40%" r="35%">
+          <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:.3"/>
+          <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0"/>
+        </radialGradient>
+        <linearGradient id="fade-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="60%" style="stop-color:#000;stop-opacity:0"/>
+          <stop offset="100%" style="stop-color:#0d0d14;stop-opacity:1"/>
+        </linearGradient>
+        <filter id="blur-sm"><feGaussianBlur stdDeviation="1.5"/></filter>
+      </defs>
+
+      <!-- Background -->
+      <rect width="1400" height="420" fill="url(#bg-grad)"/>
+      <rect width="1400" height="420" fill="url(#glow1)"/>
+      <rect width="1400" height="420" fill="url(#glow2)"/>
+
+      <!-- Dot grid -->
+      <g opacity=".18" fill="#a78bfa">
+        <circle cx="100" cy="60" r="1.5"/><circle cx="180" cy="60" r="1.5"/><circle cx="260" cy="60" r="1.5"/><circle cx="340" cy="60" r="1.5"/><circle cx="420" cy="60" r="1.5"/><circle cx="500" cy="60" r="1.5"/><circle cx="580" cy="60" r="1.5"/><circle cx="660" cy="60" r="1.5"/><circle cx="740" cy="60" r="1.5"/><circle cx="820" cy="60" r="1.5"/><circle cx="900" cy="60" r="1.5"/><circle cx="980" cy="60" r="1.5"/><circle cx="1060" cy="60" r="1.5"/><circle cx="1140" cy="60" r="1.5"/><circle cx="1220" cy="60" r="1.5"/><circle cx="1300" cy="60" r="1.5"/>
+        <circle cx="100" cy="140" r="1.5"/><circle cx="180" cy="140" r="1.5"/><circle cx="260" cy="140" r="1.5"/><circle cx="340" cy="140" r="1.5"/><circle cx="420" cy="140" r="1.5"/><circle cx="500" cy="140" r="1.5"/><circle cx="580" cy="140" r="1.5"/><circle cx="660" cy="140" r="1.5"/><circle cx="740" cy="140" r="1.5"/><circle cx="820" cy="140" r="1.5"/><circle cx="900" cy="140" r="1.5"/><circle cx="980" cy="140" r="1.5"/><circle cx="1060" cy="140" r="1.5"/><circle cx="1140" cy="140" r="1.5"/><circle cx="1220" cy="140" r="1.5"/><circle cx="1300" cy="140" r="1.5"/>
+        <circle cx="100" cy="220" r="1.5"/><circle cx="180" cy="220" r="1.5"/><circle cx="260" cy="220" r="1.5"/><circle cx="340" cy="220" r="1.5"/><circle cx="420" cy="220" r="1.5"/><circle cx="500" cy="220" r="1.5"/><circle cx="580" cy="220" r="1.5"/><circle cx="660" cy="220" r="1.5"/><circle cx="740" cy="220" r="1.5"/><circle cx="820" cy="220" r="1.5"/><circle cx="900" cy="220" r="1.5"/><circle cx="980" cy="220" r="1.5"/><circle cx="1060" cy="220" r="1.5"/><circle cx="1140" cy="220" r="1.5"/><circle cx="1220" cy="220" r="1.5"/>
+        <circle cx="100" cy="300" r="1.5"/><circle cx="180" cy="300" r="1.5"/><circle cx="260" cy="300" r="1.5"/><circle cx="340" cy="300" r="1.5"/><circle cx="420" cy="300" r="1.5"/><circle cx="500" cy="300" r="1.5"/><circle cx="580" cy="300" r="1.5"/><circle cx="660" cy="300" r="1.5"/><circle cx="740" cy="300" r="1.5"/><circle cx="820" cy="300" r="1.5"/><circle cx="900" cy="300" r="1.5"/><circle cx="980" cy="300" r="1.5"/>
+        <circle cx="100" cy="380" r="1.5"/><circle cx="180" cy="380" r="1.5"/><circle cx="260" cy="380" r="1.5"/>
+      </g>
+
+      <!-- Terminal window (left) -->
+      <g transform="translate(60, 90)">
+        <rect width="320" height="200" rx="10" fill="#0f0f1a" stroke="#2d2d4a" stroke-width="1" opacity=".9"/>
+        <rect width="320" height="28" rx="10" fill="#1c1c2e" opacity=".9"/>
+        <rect y="18" width="320" height="10" fill="#1c1c2e"/>
+        <circle cx="18" cy="14" r="5" fill="#ff5f56" opacity=".8"/>
+        <circle cx="34" cy="14" r="5" fill="#ffbd2e" opacity=".8"/>
+        <circle cx="50" cy="14" r="5" fill="#27c93f" opacity=".8"/>
+        <!-- Code lines -->
+        <text x="14" y="56" font-family="monospace" font-size="11" fill="#7c3aed" opacity=".9">$ claude code</text>
+        <text x="14" y="76" font-family="monospace" font-size="11" fill="#a78bfa" opacity=".7">✓ Claude Code ready</text>
+        <text x="14" y="96" font-family="monospace" font-size="11" fill="#64748b">Build me a website.</text>
+        <text x="14" y="116" font-family="monospace" font-size="11" fill="#22d3ee" opacity=".85">  Creating index.html...</text>
+        <text x="14" y="136" font-family="monospace" font-size="11" fill="#22d3ee" opacity=".75">  Writing styles...</text>
+        <text x="14" y="156" font-family="monospace" font-size="11" fill="#22d3ee" opacity=".65">  Adding navigation...</text>
+        <text x="14" y="176" font-family="monospace" font-size="11" fill="#4ade80" opacity=".9">✓ Done. 3 files created.</text>
+        <!-- Cursor blink -->
+        <rect x="14" y="189" width="8" height="2" fill="#7c3aed" opacity=".9"/>
+      </g>
+
+      <!-- Floating code fragment (top right) -->
+      <g transform="translate(920, 55)" opacity=".55">
+        <rect width="240" height="90" rx="8" fill="#0f0f1a" stroke="#2d2d4a" stroke-width="1"/>
+        <text x="14" y="26" font-family="monospace" font-size="10" fill="#7c3aed">const idea = "build this";</text>
+        <text x="14" y="46" font-family="monospace" font-size="10" fill="#a78bfa">const barrier = null;</text>
+        <text x="14" y="66" font-family="monospace" font-size="10" fill="#4ade80">// ship it</text>
+      </g>
+
+      <!-- Floating code fragment (right lower) -->
+      <g transform="translate(1060, 200)" opacity=".4">
+        <rect width="200" height="70" rx="8" fill="#0f0f1a" stroke="#2d2d4a" stroke-width="1"/>
+        <text x="14" y="24" font-family="monospace" font-size="10" fill="#22d3ee">describe("website");</text>
+        <text x="14" y="44" font-family="monospace" font-size="10" fill="#64748b">// AI writes it</text>
+        <text x="14" y="62" font-family="monospace" font-size="10" fill="#4ade80">// ✓ running</text>
+      </g>
+
+      <!-- Laptop silhouette (center-right) -->
+      <g transform="translate(500, 80)" opacity=".35">
+        <rect x="60" y="80" width="380" height="240" rx="12" fill="none" stroke="#4b5563" stroke-width="2"/>
+        <rect x="75" y="95" width="350" height="210" rx="4" fill="#0a0a14"/>
+        <rect x="85" y="105" width="330" height="190" rx="3" fill="#0d0d20"/>
+        <!-- Screen glow -->
+        <rect x="85" y="105" width="330" height="190" rx="3" fill="url(#glow1)" opacity=".6"/>
+        <!-- Keyboard base -->
+        <rect x="20" y="322" width="460" height="24" rx="0 0 8 8" fill="none" stroke="#4b5563" stroke-width="1.5"/>
+        <rect x="0" y="346" width="500" height="8" rx="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+      </g>
+
+      <!-- Stars -->
+      <g opacity=".5" fill="#fff">
+        <circle cx="850" cy="30" r="1"/><circle cx="920" cy="50" r="1.5"/><circle cx="1050" cy="20" r="1"/><circle cx="1180" cy="45" r="1"/><circle cx="1300" cy="80" r="1.5"/><circle cx="1350" cy="30" r="1"/><circle cx="790" cy="70" r="1"/><circle cx="1250" cy="130" r="1"/>
+      </g>
+
+      <!-- Bottom fade overlay -->
+      <rect width="1400" height="420" fill="url(#fade-bottom)"/>
+    </svg>
+  </div>
 
   <!-- POST LAYOUT -->
   <div class="post-layout">
@@ -114,7 +200,7 @@
 
       <h2 id="new-role-new-imposter">New Role, New Imposter</h2>
       <p>
-        In March 2026, I became Senior Manager for Product Management and AI Business
+        In March 2026, I became Senior Manager working with Product Management and AI Business
         Transformation at Norlys. Which is a long title that essentially means: help drive
         AI initiatives into the business — for colleagues and for customers — while also
         running product management across our channels.
@@ -231,12 +317,24 @@
 
       <hr />
 
-      <p style="font-size:.9rem; color:var(--text-3);">
-        <em>
-          First post. Many more coming.
-          <a href="mailto:dattran@outlook.dk">Drop me a line</a> if you want to talk.
-        </em>
-      </p>
+      <div class="post-share">
+        <span class="post-share-label">Share</span>
+        <a id="linkedin-share" class="post-share-btn linkedin" href="#" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57A1.32 1.32 0 0 1 14.24 12.25C14.94 12.25 15.5 12.81 15.5 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+          LinkedIn
+        </a>
+        <button class="post-share-btn copy-link" id="copy-link-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copy link
+        </button>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(124,58,237,.12), rgba(59,130,246,.08)); border: 1px solid rgba(124,58,237,.25); border-radius: 14px; padding: 2rem 2.25rem; margin: 1.5rem 0 2.5rem;">
+        <p style="font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#a78bfa; margin:0 0 .5rem;">Stay in the loop</p>
+        <p style="font-size:1.05rem; font-weight:600; color:var(--white); margin:0 0 .35rem;">More posts coming — AI, product, strategy, and whatever I'm learning next.</p>
+        <p style="font-size:.9rem; color:var(--text-2); margin:0 0 1.25rem;">No newsletter yet — but follow me on LinkedIn and you'll catch new posts there.</p>
+        <a href="https://www.linkedin.com/in/dat-tran-a1a35b54/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Follow on LinkedIn →</a>
+      </div>
 
       <div class="post-back">
         <a href="index.html" class="back-link">
